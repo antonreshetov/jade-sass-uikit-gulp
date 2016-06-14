@@ -1,0 +1,153 @@
+extends ./templates/head.jade
+block content
+	.main-wrap
+		include ./templates/nav
+		#myid.uk-offcanvas
+			.uk-offcanvas-bar
+				ul.uk-nav.uk-nav-offcanvas(data-uk-nav)
+					li Lorem
+					li Lorem
+					li Lorem
+					li Lorem
+		button.uk-button(data-uk-offcanvas="{target:'#myid'}") btn
+		h1#wrapper Типографика
+		p
+			| На данной странице отображены основные стили типографики Kube CSS Framework
+		hr
+		h1#headings Заголовки
+		h1 Заголовок h1
+		h2 Заголовок h2
+		h3 Заголовок h3
+		h4 Заголовок h4
+		h5 Заголовок h5
+		h6 Заголовок h6
+		hr
+		h1#paragraph Параграф и элементы текста
+		p
+			| Далеко-далеко за словесными горами, 
+			a(href='#', title='test link') демо ссылка 
+			| в стране <em>гласных</em> и <strong>согласных</strong> живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку.
+
+		p Далеко-далеко за словесными горами в стране <sup>гласных</sup> и <sub>согласных</sub> живут <abbr title="Рыбные тексты">РТ</abbr>. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку.
+		blockquote
+			| "Цитируемый текст" 
+			br
+			| - Автор
+		img(src="http://placehold.it/900x300/BDCCEB/ffffff/?text=text", alt="")
+		
+		small
+			a(href='#wrapper') [наверх]
+		hr
+		h1#list_types Списки
+		h3 Cписок определений
+		dl
+			dt Определение 1
+			dd Описание 1
+			dt Определение 2 
+			dd Описание 2
+
+		h3 Нумерованный список
+		ol
+			li Позиция 1
+			li Позиция 2
+			li Позиция 3
+		h3 Маркированный список
+		ul
+			li Позиция 1
+			li Позиция 2
+			li Позиция 3
+		small
+			a(href='#wrapper') [наверх]
+		hr
+		h1#form_elements Группа элементов формы;
+		h1 Заголовок группы элементов;
+		h1 Формы и Элементы форм;
+		br
+		fieldset
+			legend Заголовок группы элементов
+			p
+				| Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+			form.uk-form
+				h2 Формы и Элементы форм
+				p
+					| Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+				p
+					label(for='text_field') Текстовое поле:
+					br
+					input#text_field.uk-form-large(type='text')
+				p
+					label(for='text_area') Область теста:
+					br
+					textarea#text_area.uk-form-large
+				p
+					label(for='select_element') Выпадающий список:
+					br
+					select(name='select_element')
+						optgroup(label='Группа элементов 1')
+							option(value='1') Элемент 1
+							option(value='2') Элемент 2
+							option(value='3') Элемент 3
+						optgroup(label='Группа элементов 2')
+							option(value='1') Элемент 1
+							option(value='2') Элемент 2
+							option(value='3') Элемент 3
+				p
+					label(for='radio_buttons') Переключатель:
+					br
+					input.radio(type='radio', name='radio_button', value='radio_1')
+					|  Элемент 1
+					br
+					input.radio(type='radio', name='radio_button', value='radio_2')
+					|  Элемент 2
+					br
+					input.radio(type='radio', name='radio_button', value='radio_3')
+					|  Элемент 3
+					br
+				p
+					label(for='checkboxes') Флажок:
+					br
+					input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+					|  Элемент 1
+					br
+					input.checkbox(type='checkbox', name='checkboxes', value='check_2')
+					|  Элемент 2
+					br
+					input.checkbox(type='checkbox', name='checkboxes', value='check_3')
+					|  Элемент 3
+					br
+				p
+					label(for='password') Пароль:
+					br
+					input.password(type='password', name='password')
+				p
+					label(for='file') Загрузка:
+					br
+					input.file(type='file', name='file')
+				p
+					input.uk-button(type='reset', value='Clear')
+					input.uk-button(type='submit', value='Submit')
+		small
+			a(href='#wrapper') [наверх]
+		hr
+		h1#tables Таблица
+		table.uk-table(cellspacing='0', cellpadding='0')
+			tr
+				th Заголовок 1
+				th Заголовок 2
+				th Заголовок 3
+			tr
+				td Описание 1
+				td Описание 2
+				td Описание 3
+			tr.even
+				td Описание 1
+				td Описание 2
+				td Описание 3
+			tr
+				td Описание 1
+				td Описание 2
+				td Описание 3
+		small
+			a(href='#wrapper') [наверх]
+		hr
+		include ./templates/footer.jade
