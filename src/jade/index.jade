@@ -2,25 +2,6 @@ extends ./templates/head.jade
 block content
 	.main-wrap
 		include ./templates/nav
-		//- SLIDER
-		h2 SLIDER
-		.flexslider
-			ul.slides
-				li
-					img(src="http://placehold.it/1900x900/6A9FCC/ffffff/?text=Slide-1", alt="")
-					//- p.flex-caption 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dicta.
-				li
-					img(src="http://placehold.it/1900x900/F9B264/ffffff/?text=Slide-2", alt="")
-					//- p.flex-caption 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dicta.
-				li
-					img(src="http://placehold.it/1900x900/cccccc/ffffff/?text=Slide-3", alt="")
-				li
-					img(src="http://placehold.it/1900x900/6A9FCC/ffffff/?text=Slide-4", alt="")
-				li
-					img(src="http://placehold.it/1900x900/F9B264/ffffff/?text=Slide-5", alt="")
-				li
-					img(src="http://placehold.it/1900x900/cccccc/ffffff/?text=Slide-6", alt="")
-
 		//- CAROUSEL
 		br
 		h2 CAROUSEL
@@ -41,18 +22,17 @@ block content
 		//- LIGHTBOX
 		br
 		h2 LIGHTBOX
-		.wrap.gutter-10-md
-			.md-4-1
-				a.fancybox(rel="gallery-1" href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
-					img(src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg", alt="")
-			.md-4-1
-				a.fancybox(rel="gallery-1" href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg")
-					img(src="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg", alt="")
-			.md-4-1
-				a.fancybox(rel="gallery-1" href="http://farm1.staticflickr.com/574/22407305427_69cc6e845f_b.jpg")
-					img(src="http://farm1.staticflickr.com/574/22407305427_69cc6e845f_b.jpg", alt="")
-			.md-4-1
-				a.fancybox(rel="gallery-1" href="http://farm1.staticflickr.com/291/18653638823_a86b58523c_b.jpg")
-					img(src="http://farm1.staticflickr.com/291/18653638823_a86b58523c_b.jpg", alt="")
-				
+		.uk-grid
+			.uk-width-1-4
+				a(data-uk-lightbox href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+					img(src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+			.uk-width-1-4
+				a(data-uk-lightbox href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg")
+					img(src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+			.uk-width-1-4
+				a(data-uk-lightbox href="http://farm1.staticflickr.com/574/22407305427_69cc6e845f_b.jpg")
+					img(src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+			.uk-width-1-4
+				a(data-uk-lightbox href="http://farm1.staticflickr.com/291/18653638823_a86b58523c_b.jpg")
+					img(src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
 		include ./templates/footer.jade
