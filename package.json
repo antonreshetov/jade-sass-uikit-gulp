@@ -1,5 +1,5 @@
 {
-  "name": "Jade-Sass-Gulp-Start-Kit",
+  "name": "Jade Gulp Sass Uikit",
   "author": "Anton Reshetov",
   "version": "0.1.0",
   "devDependencies": {
@@ -10,6 +10,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-jade": "^1.1.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
     "gulp-order": "^1.1.1",
     "gulp-prettify": "^0.4.0",
     "gulp-rename": "^1.2.2",
