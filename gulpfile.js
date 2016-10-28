@@ -14,6 +14,7 @@ var order        = require("gulp-order");
 var merge        = require('merge-stream');
 var htmlpretty   = require('gulp-prettify');
 var notify       = require("gulp-notify");
+var posthtml     = require('gulp-posthtml');
 
 // Error Handler
 function swallowError (error) {
@@ -138,6 +139,21 @@ gulp.task('watch', function(){
 gulp.task('clean', function () {
   return gulp.src('app', {force: true})
     .pipe(clean());
+});
+
+// PostHMTL
+gulp.task('posthtml', function () {
+    var plugins = [
+        require('posthtml-doctype')('<!DOCTYPE html>'),
+        require('posthtml-custom-elements')()
+    ];
+
+    var options = { closingSingleTag: 'slash' };
+
+
+    return gulp.src('./app/*.html')
+        .pipe(posthtml(plugins, options))
+        .pipe(gulp.dest('./app'));
 });
 
 // Run Default
